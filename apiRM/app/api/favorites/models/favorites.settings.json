@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "favorites",
+  "info": {
+    "name": "favorites"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "idCharacter": {
+      "required": true,
+      "type": "biginteger"
+    },
+    "NameCharacter": {
+      "type": "string",
+      "required": true
+    },
+    "linkImageCharacter": {
+      "type": "string",
+      "required": true
+    },
+    "users": {
+      "via": "favorites",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}
